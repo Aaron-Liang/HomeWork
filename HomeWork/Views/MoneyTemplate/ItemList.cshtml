@@ -1,0 +1,55 @@
+﻿@model IEnumerable<HomeWork.Models.ViewModels.MoneyTemplateViewModels>
+
+@{
+    Layout = null;
+    var i = 0;
+    var varDate = "";
+    var varMoney = "";
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-bordered table-hover">
+            <thead class="bg-primary">
+                <tr>
+                    <th width="10%">#</th>
+                    <th width="30%">@Html.DisplayNameFor(model => model.category)</th>
+                    <th width="30%">@Html.DisplayNameFor(model => model.date)</th>
+                    <th width="30%">@Html.DisplayNameFor(model => model.money)</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td width="10%">@(++i)</td>
+                        <td width="30%">@Html.DisplayFor(modelItem => item.category)</td>
+                        <td width="30%">
+                            @{
+                                varDate = item.date.ToString("yyyy-MM-dd");
+                            }
+                            @varDate
+                        </td>
+                        <td width="30%">
+                            @{
+                                varMoney = item.money.ToString("#,0");
+                            }
+                            @varMoney
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script src="~/Scripts/jquery-3.3.1.intellisense.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
