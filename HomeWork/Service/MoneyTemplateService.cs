@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using HomeWork.Models;
 using HomeWork.Models.ViewModels;
 using HomeWork.Models.CommonModels;
+using Dapper;
+
 namespace HomeWork.Service
 {
     public class MoneyTemplateService
@@ -13,18 +16,16 @@ namespace HomeWork.Service
 
         public IEnumerable<MoneyTemplateViewModels> GetItemList()
         {
-            var arrayCategory = commonService.GetRandomValue(50, 3);
-            var arrayMoney = commonService.GetRandomValue(50, 5000);
+            List<MoneyTemplateViewModels> moneyTemplateViewModels = new List<MoneyTemplateViewModels>();
+            var Conn = new SkillTreeHomeworkEntities().Database.Connection;
 
-            for (var i = 0; i < 50; i++)
-            {
-                yield return new MoneyTemplateViewModels()
-                {
-                    category = arrayCategory[i] == 1 ? CategoryCommonModels.支出 : CategoryCommonModels.收入,
-                    date = DateTime.Now.AddDays(i),
-                    money = arrayMoney[i]
-                };
-            }
+            string strSQL = "select Id id, Categoryyy category, Amounttt money, Dateee date, Remarkkk description " +
+                            " from AccountBook " +
+                            " order by Dateee ";
+
+            moneyTemplateViewModels = Conn.Query<MoneyTemplateViewModels>(strSQL, null).ToList();
+
+            return moneyTemplateViewModels;
         }
     }
 }

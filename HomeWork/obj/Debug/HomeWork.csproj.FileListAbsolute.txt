@@ -97,3 +97,12 @@ F:\電腦教學\ASP.NET MVC\SkillTree_3Day\作業\HomeWork\HomeWork\obj\Debug\Ho
 F:\電腦教學\ASP.NET MVC\SkillTree_3Day\作業\HomeWork\HomeWork\obj\Debug\HomeWork.csproj.CopyComplete
 F:\電腦教學\ASP.NET MVC\SkillTree_3Day\作業\HomeWork\HomeWork\obj\Debug\HomeWork.dll
 F:\電腦教學\ASP.NET MVC\SkillTree_3Day\作業\HomeWork\HomeWork\obj\Debug\HomeWork.pdb
+F:\電腦教學\ASP.NET MVC\SkillTree_3Day\作業\HomeWork\HomeWork\obj\Debug\HomeWork.csprojAssemblyReference.cache
+F:\電腦教學\ASP.NET MVC\SkillTree_3Day\作業\HomeWork\HomeWork\bin\Dapper.dll
+F:\電腦教學\ASP.NET MVC\SkillTree_3Day\作業\HomeWork\HomeWork\bin\EntityFramework.dll
+F:\電腦教學\ASP.NET MVC\SkillTree_3Day\作業\HomeWork\HomeWork\bin\EntityFramework.SqlServer.dll
+F:\電腦教學\ASP.NET MVC\SkillTree_3Day\作業\HomeWork\HomeWork\bin\Dapper.xml
+F:\電腦教學\ASP.NET MVC\SkillTree_3Day\作業\HomeWork\HomeWork\bin\EntityFramework.xml
+F:\電腦教學\ASP.NET MVC\SkillTree_3Day\作業\HomeWork\HomeWork\bin\EntityFramework.SqlServer.xml
+F:\電腦教學\ASP.NET MVC\SkillTree_3Day\作業\HomeWork\HomeWork\bin\zh-Hant\EntityFramework.resources.dll
+F:\電腦教學\ASP.NET MVC\SkillTree_3Day\作業\HomeWork\HomeWork\bin\zh-Hant\EntityFramework.SqlServer.resources.dll

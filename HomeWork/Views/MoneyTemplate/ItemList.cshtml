@@ -25,7 +25,18 @@
                 {
                     <tr>
                         <td width="10%">@(++i)</td>
-                        <td width="30%">@Html.DisplayFor(modelItem => item.category)</td>
+                        <td width="30%">
+                            @{
+                                if (item.category == 0)
+                                {
+                                    <span style="color:red">@Html.DisplayFor(modelItem => item.category)</span>
+                                }
+                                else
+                                {
+                                    <span style="color:blue">@Html.DisplayFor(modelItem => item.category)</span>
+                                }
+                            }
+                        </td>
                         <td width="30%">
                             @{
                                 varDate = item.date.ToString("yyyy-MM-dd");
