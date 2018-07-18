@@ -3,21 +3,16 @@
 @{
     Layout = null;
     var i = 0;
-    var varDate = "";
-    var varMoney = "";
 }
-
-<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-
 <div class="row">
     <div class="col-md-12">
         <table class="table table-bordered table-hover">
             <thead class="bg-primary">
                 <tr>
                     <th width="10%">#</th>
-                    <th width="30%">@Html.DisplayNameFor(model => model.category)</th>
-                    <th width="30%">@Html.DisplayNameFor(model => model.date)</th>
-                    <th width="30%">@Html.DisplayNameFor(model => model.money)</th>
+                    <th width="30%">@Html.DisplayNameFor(model => model.Category)</th>
+                    <th width="30%">@Html.DisplayNameFor(model => model.Date)</th>
+                    <th width="30%">@Html.DisplayNameFor(model => model.Money)</th>
                 </tr>
             </thead>
             <tbody>
@@ -27,27 +22,21 @@
                         <td width="10%">@(++i)</td>
                         <td width="30%">
                             @{
-                                if (item.category == 0)
+                                if (item.Category == 0)
                                 {
-                                    <span style="color:red">@Html.DisplayFor(modelItem => item.category)</span>
+                                    <span style="color:red">@Html.DisplayFor(modelItem => item.Category)</span>
                                 }
                                 else
                                 {
-                                    <span style="color:blue">@Html.DisplayFor(modelItem => item.category)</span>
+                                    <span style="color:blue">@Html.DisplayFor(modelItem => item.Category)</span>
                                 }
                             }
                         </td>
                         <td width="30%">
-                            @{
-                                varDate = item.date.ToString("yyyy-MM-dd");
-                            }
-                            @varDate
+                            @(item.Date.ToString("yyyy-MM-dd"))
                         </td>
                         <td width="30%">
-                            @{
-                                varMoney = item.money.ToString("#,0");
-                            }
-                            @varMoney
+                            @(item.Money.ToString("#,0"))
                         </td>
                     </tr>
                 }
@@ -55,12 +44,3 @@
         </table>
     </div>
 </div>
-
-<script src="~/Scripts/bootstrap.min.js"></script>
-<script src="~/Scripts/jquery-3.3.1.intellisense.js"></script>
-<script src="~/Scripts/jquery.validate.min.js"></script>
-<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
-
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}

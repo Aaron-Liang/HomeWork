@@ -4,8 +4,6 @@
     ViewBag.Title = "Index";
 }
 
-<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
@@ -18,39 +16,39 @@
 
                 <div class="form-group">
                     <div class="col-sm-2 text-right">
-                        @Html.LabelFor(model => model.category, htmlAttributes: new { @class = "control-label" })
+                        @Html.LabelFor(model => model.Category, new { @class = "control-label" })
 
                     </div>
                     <div class="col-sm-10">
-                        @Html.EnumDropDownListFor(model => model.category, "請選擇", new { @class = "form-control" })
-                        @Html.ValidationMessageFor(model => model.category, "", new { @class = "text-danger" })
+                        @Html.EnumDropDownListFor(model => model.Category, "請選擇", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Category, "", new { @class = "text-danger" })
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-sm-2 text-right">
-                        @Html.LabelFor(model => model.money, htmlAttributes: new { @class = "control-label" })
+                        @Html.LabelFor(model => model.Money, new { @class = "control-label" })
                     </div>
                     <div class="col-sm-10">
-                        @Html.TextBoxFor(model => model.money, htmlAttributes: new { @class = "form-control", @placeholder = "金額" })
-                        @Html.ValidationMessageFor(model => model.money, "", new { @class = "text-danger" })
+                        @Html.TextBoxFor(model => model.Money,  new { @class = "form-control", @placeholder = "金額" })
+                        @Html.ValidationMessageFor(model => model.Money, "", new { @class = "text-danger" })
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-sm-2 text-right">
-                        @Html.LabelFor(model => model.date, htmlAttributes: new { @class = "control-label" })                        
+                        @Html.LabelFor(model => model.Date, new { @class = "control-label" })                        
                     </div>
                     <div class="col-sm-10">
-                        @Html.TextBoxFor(model => model.date, htmlAttributes: new { @class = "form-control", @placeholder = "日期" })
-                        @Html.ValidationMessageFor(model => model.date, "", new { @class = "text-danger" })
+                        @Html.TextBoxFor(model => model.Date,  new { @class = "form-control", @placeholder = "日期" })
+                        @Html.ValidationMessageFor(model => model.Date, "", new { @class = "text-danger" })
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-sm-2 text-right">
-                        @Html.LabelFor(model => model.description, htmlAttributes: new { @class = "control-label" })
+                        @Html.LabelFor(model => model.Description,  new { @class = "control-label" })
                     </div>
                     <div class="col-sm-10">
-                        @Html.TextAreaFor(model => model.description, htmlAttributes: new { @class = "form-control" })
-                        @Html.ValidationMessageFor(model => model.description, "", new { @class = "text-danger" })
+                        @Html.TextAreaFor(model => model.Description, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
                     </div>
                 </div>
                 <div class="form-group">
@@ -65,10 +63,6 @@
     </div>
 }
 
-<script src="~/Scripts/bootstrap.min.js"></script>
-<script src="~/Scripts/jquery-3.3.1.intellisense.js"></script>
-<script src="~/Scripts/jquery.validate.min.js"></script>
-<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
