@@ -10,9 +10,9 @@
             <thead class="bg-primary">
                 <tr>
                     <th width="10%">#</th>
-                    <th width="30%">@Html.DisplayNameFor(model => model.category)</th>
-                    <th width="30%">@Html.DisplayNameFor(model => model.date)</th>
-                    <th width="30%">@Html.DisplayNameFor(model => model.money)</th>
+                    <th width="30%">@Html.DisplayNameFor(model => model.Category)</th>
+                    <th width="30%">@Html.DisplayNameFor(model => model.Date)</th>
+                    <th width="30%">@Html.DisplayNameFor(model => model.Money)</th>
                 </tr>
             </thead>
             <tbody>
@@ -22,21 +22,21 @@
                         <td width="10%">@(++i)</td>
                         <td width="30%">
                             @{
-                                if (item.category == 0)
+                                if (item.Category == 0)
                                 {
-                                    <span style="color:red">@Html.DisplayFor(modelItem => item.category)</span>
+                                    <span style="color:red">@Html.DisplayFor(modelItem => item.Category)</span>
                                 }
                                 else
                                 {
-                                    <span style="color:blue">@Html.DisplayFor(modelItem => item.category)</span>
+                                    <span style="color:blue">@Html.DisplayFor(modelItem => item.Category)</span>
                                 }
                             }
                         </td>
                         <td width="30%">
-                            @(item.date.ToString("yyyy-MM-dd"))
+                            @(item.Date.ToString("yyyy-MM-dd"))
                         </td>
                         <td width="30%">
-                            @(item.money.ToString("#,0"))
+                            @(item.Money.ToString("#,0"))
                         </td>
                     </tr>
                 }

@@ -29,10 +29,10 @@ namespace HomeWork.Controllers
             {
                 AccountBook accountBooks = new AccountBook();
                 accountBooks.Id= Guid.NewGuid();
-                accountBooks.Categoryyy = model.category.ToString() == "支出" ? 0 : 1;
-                accountBooks.Amounttt = model.money;
-                accountBooks.Dateee = model.date;
-                accountBooks.Remarkkk = model.description;
+                accountBooks.Categoryyy = model.Category.ToString() == "支出" ? 0 : 1;
+                accountBooks.Amounttt = model.Money;
+                accountBooks.Dateee = model.Date;
+                accountBooks.Remarkkk = model.Description;
                 db.AccountBook.Add(accountBooks);
                 db.SaveChanges();
 
