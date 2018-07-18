@@ -3,8 +3,6 @@
 @{
     Layout = null;
     var i = 0;
-    var varDate = "";
-    var varMoney = "";
 }
 
 <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
@@ -38,16 +36,10 @@
                             }
                         </td>
                         <td width="30%">
-                            @{
-                                varDate = item.date.ToString("yyyy-MM-dd");
-                            }
-                            @varDate
+                            @(item.date.ToString("yyyy-MM-dd"))
                         </td>
                         <td width="30%">
-                            @{
-                                varMoney = item.money.ToString("#,0");
-                            }
-                            @varMoney
+                            @(item.money.ToString("#,0"))
                         </td>
                     </tr>
                 }
