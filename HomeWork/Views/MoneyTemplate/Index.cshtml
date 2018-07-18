@@ -18,7 +18,7 @@
 
                 <div class="form-group">
                     <div class="col-sm-2 text-right">
-                        @Html.LabelFor(model => model.category, htmlAttributes: new { @class = "control-label" })
+                        @Html.LabelFor(model => model.category, new { @class = "control-label" })
 
                     </div>
                     <div class="col-sm-10">
@@ -28,28 +28,28 @@
                 </div>
                 <div class="form-group">
                     <div class="col-sm-2 text-right">
-                        @Html.LabelFor(model => model.money, htmlAttributes: new { @class = "control-label" })
+                        @Html.LabelFor(model => model.money, new { @class = "control-label" })
                     </div>
                     <div class="col-sm-10">
-                        @Html.TextBoxFor(model => model.money, htmlAttributes: new { @class = "form-control", @placeholder = "金額" })
+                        @Html.TextBoxFor(model => model.money,  new { @class = "form-control", @placeholder = "金額" })
                         @Html.ValidationMessageFor(model => model.money, "", new { @class = "text-danger" })
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-sm-2 text-right">
-                        @Html.LabelFor(model => model.date, htmlAttributes: new { @class = "control-label" })                        
+                        @Html.LabelFor(model => model.date, new { @class = "control-label" })                        
                     </div>
                     <div class="col-sm-10">
-                        @Html.TextBoxFor(model => model.date, htmlAttributes: new { @class = "form-control", @placeholder = "日期" })
+                        @Html.TextBoxFor(model => model.date,  new { @class = "form-control", @placeholder = "日期" })
                         @Html.ValidationMessageFor(model => model.date, "", new { @class = "text-danger" })
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-sm-2 text-right">
-                        @Html.LabelFor(model => model.description, htmlAttributes: new { @class = "control-label" })
+                        @Html.LabelFor(model => model.description,  new { @class = "control-label" })
                     </div>
                     <div class="col-sm-10">
-                        @Html.TextAreaFor(model => model.description, htmlAttributes: new { @class = "form-control" })
+                        @Html.TextAreaFor(model => model.description, new { @class = "form-control" })
                         @Html.ValidationMessageFor(model => model.description, "", new { @class = "text-danger" })
                     </div>
                 </div>
